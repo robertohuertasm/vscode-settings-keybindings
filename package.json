@@ -1,0 +1,91 @@
+{
+  "name": "vscode-settings-keybindings",
+  "displayName": "VS Code Settings KeyBindings",
+  "description": "Change the values of your settings via keybindings",
+  "publisher": "robertohuertasm",
+  "license": "MIT",
+  "author": {
+    "email": "roberto.huertas@outlook.com",
+    "name": "Roberto Huertas",
+    "url": "https://robertohuertas.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robertohuertasm/vscode-settings-keybindings"
+  },
+  "bugs": {
+    "url": "https://github.com/robertohuertasm/vscode-settings-keybindings/issues",
+    "email": "roberto.huertas@outlook.com"
+  },
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "categories": [
+    "Other",
+    "Keymaps"
+  ],
+  "icon": "resources/logo@2x.png",
+  "keywords": [
+    "settings",
+    "keybindings",
+    "keymaps"
+  ],
+  "galleryBanner": {
+    "color": "#e1642e",
+    "theme": "dark"
+  },
+  "badges": [
+    {
+      "url": "https://github.com/robertohuertasm/vscode-settings-keybindings/actions/workflows/ci.yaml/badge.svg",
+      "href": "https://github.com/robertohuertasm/vscode-settings-keybindings/actions/workflows/ci.yaml",
+      "description": "CI"
+    }
+  ],
+  "homepage": "https://github.com/robertohuertasm/vscode-settings-keybindings",
+  "sponsor": {
+    "url": "https://robertohuertas.com/sponsorship/"
+  },
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscode-settings-keybindings.setSetting",
+        "title": "Set Setting",
+        "shortTitle": "Set a setting via keybinding",
+        "enablement": "false"
+      },
+      {
+        "command": "vscode-settings-keybindings.reset",
+        "title": "Reset original values cache",
+        "category": "Settings KeyBindings"
+      }
+    ]
+  },
+  "scripts": {
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "changelog:first": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test",
+    "format:check": "prettier --check .",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.94.0",
+    "@types/mocha": "^10.0.8",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.7.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "eslint": "^9.11.1",
+    "typescript": "^5.6.2",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "conventional-changelog-cli": "5.0.0",
+    "prettier": "^2.5.1"
+  }
+}

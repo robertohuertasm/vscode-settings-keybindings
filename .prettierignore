@@ -1,0 +1,9 @@
+out
+.vscode-test*
+*.md
+package*.json
+coverage
+dist
+.prettierrc
+.vscode
+resources
