@@ -55,7 +55,7 @@ export function activate(context: vscode.ExtensionContext) {
 
       const toggleValue = (args as any)['toggleValue'];
       // if this value is informed, we have to switch between the value and the toggledValue
-      if (toggleValue) {
+      if (toggleValue !== undefined) {
         // as we have both values, we just need to keep track of the isToggled state.
         if (!initialValue || !initialValue.isToggled) {
           // we have to switch to the toggled value
