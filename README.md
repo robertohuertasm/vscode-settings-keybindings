@@ -12,17 +12,13 @@
 [![Installs](https://img.shields.io/visual-studio-marketplace/i/robertohuertasm.vscode-settings-keybindings.svg?style=for-the-badge&colorA=252525&colorB=e1642e)](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-settings-keybindings)
 [![Downloads](https://img.shields.io/visual-studio-marketplace/d/robertohuertasm.vscode-settings-keybindings.svg?style=for-the-badge&colorA=252525&colorB=e1642e)](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-settings-keybindings)
 
-
 <br/>
 
 </div>
 
-
-
-
 ## Use case
 
-There's no easy way to set a keybinding to set or toggle the value of some settings in VS Code. 
+There's no easy way to set a keybinding to set or toggle the value of some settings in VS Code.
 
 This extension provides a command to set any setting to any value. The command can then be mapped to the keybinding of your choice.
 
@@ -87,38 +83,34 @@ Adding some extra modification to the `Material Theme Darker`:
   "key": "ctrl+shift+alt+t",
   "command": "vscode-settings-keybindings.setSetting",
   "args": {
-   "args": {
-      "key": "editor.tokenColorCustomizations",
-      "toggle": true,
-      "toggleValue": null, // remove the setting when toggling
-      "value": {
-        "[Material Theme Darker]": {
-          "textMateRules": [
-            {
-              "scope": "comment",
-              "settings": {
-                "foreground": "#0c843e"
-              }
-            },
-            {
-              "scope": "comment punctuation.definition.comment",
-              "settings": {
-                "foreground": "#0c843e"
-              }
+    "key": "editor.tokenColorCustomizations",
+    "toggle": true,
+    "toggleValue": null,
+    "value": {
+      "[Material Theme Darker]": {
+        "textMateRules": [
+          {
+            "scope": "comment",
+            "settings": {
+              "foreground": "#0c843e"
             }
-          ]
-        }
+          },
+          {
+            "scope": "comment punctuation.definition.comment",
+            "settings": {
+              "foreground": "#0c843e"
+            }
+          }
+        ]
       }
     }
   }
 }
 ```
 
-
-## Resetting 
+## Resetting
 
 If something goes wrong while using the toggle with auto values (using the current value to toggle), you can always reset the settings cache by running: `F1 > Reset original values cache`.
-
 
 ## How is this different from [settings.cycle](https://marketplace.visualstudio.com/items?itemName=hoovercj.vscode-settings-cycler)?
 
